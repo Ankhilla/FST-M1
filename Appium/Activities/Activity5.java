@@ -24,7 +24,7 @@ public class Activity5 {
     public void beforeClass() throws MalformedURLException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("deviceName", "<device name>");
+        caps.setCapability("deviceName", "9638696078000NT");
         caps.setCapability("platformName", "Android");
         caps.setCapability("automationName", "UiAutomator2");
         caps.setCapability("appPackage", "com.google.android.apps.messaging");
