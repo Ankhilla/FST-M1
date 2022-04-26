@@ -24,7 +24,7 @@ public class Activity6 {
     public void beforeClass() throws MalformedURLException {
         // Set the Desired Capabilities
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("deviceName", "<Your device name>");
+        caps.setCapability("deviceName", "9638696078000NT");
         caps.setCapability("platformName", "Android");
         caps.setCapability("automationName", "UiAutomator2");
         caps.setCapability("appPackage", "com.android.chrome");
