@@ -28,8 +28,6 @@ public class Activity2 {
         caps.setCapability("appPackage", "com.android.chrome");
         caps.setCapability("appActivity", "com.google.android.apps.chrome.Main");
         caps.setCapability("noReset", true);
-
-        // Instantiate Appium Driver
         driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
         wait = new WebDriverWait(driver, 10);
     }
@@ -39,28 +37,28 @@ public class Activity2 {
         driver.get("https://www.training-support.net/");
         wait.until(ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("About Us")));
 
-        // Get heading on page and print it
+        
         String pageTitle = driver
                 .findElementByXPath("//android.widget.TextView[@text='Training Support']")
                 .getText();
         System.out.println("Title on Homepage: " + pageTitle);
 
-        // Find About Us button and click it
+        
         MobileElement aboutButton = driver.findElementByXPath("//android.view.View[@content-desc='About Us']");
         aboutButton.click();
 
-        // Wait for new page to load
+        
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 MobileBy.xpath("//android.widget.TextView[@text='About Us']")
         ));
 
-        // Get heading on About Us page and print it
+        
         String newPageTitle = driver
                 .findElementByXPath("//android.widget.TextView[@text='About Us']")
                 .getText();
         System.out.println("Title on new page: " + newPageTitle);
 
-        // Assertions
+       
         Assert.assertEquals(pageTitle, "Training Support");
         Assert.assertEquals(newPageTitle, "About Us");
     }
