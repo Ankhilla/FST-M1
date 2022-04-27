@@ -20,7 +20,7 @@ public class Activity4 {
 
     @BeforeClass
     public void beforeClass() throws MalformedURLException {
-        // Set the Desired Capabilities
+        
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", "9638696078000NT");
         caps.setCapability("platformName", "Android");
@@ -29,7 +29,7 @@ public class Activity4 {
         caps.setCapability("appActivity", ".activities.PeopleActivity");
         caps.setCapability("noReset", true);
 
-        // Instantiate Appium Driver
+        
         URL appServer = new URL("http://0.0.0.0:4723/wd/hub");
         driver = new AndroidDriver<>(appServer, caps);
         wait = new WebDriverWait(driver, 5);
