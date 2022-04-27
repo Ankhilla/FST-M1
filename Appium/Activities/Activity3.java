@@ -37,7 +37,7 @@ public class Activity3 {
         driver.findElementById("digit_5").click();
         driver.findElementById("op_add").click();
         driver.findElementById("digit_9").click();
-        // Perform Calculation
+        
         driver.findElementById("eq").click();
 
         
@@ -52,7 +52,7 @@ public class Activity3 {
         driver.findElementById("digit_0").click();
         driver.findElementById("op_sub").click();
         driver.findElementById("digit_5").click();
-        // Perform Calculation
+        
         driver.findElementById("eq").click();
 
         
