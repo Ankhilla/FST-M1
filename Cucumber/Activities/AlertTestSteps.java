@@ -17,11 +17,11 @@ public class AlertTestSteps {
 
     @Given("^User is on the page$")
     public void openPage() {
-        //Create Instances
+        
         driver = new FirefoxDriver();
         wait = new WebDriverWait(driver, 10);
 
-        //Open browser
+        
         driver.get("https://www.training-support.net/selenium/javascript-alerts");
     }
 
